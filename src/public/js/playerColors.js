@@ -12,10 +12,10 @@ const HEX = {
 };
 
 const ORDER = [
-	'RED',
-	'YELLOW',
 	'GREEN',
 	'BLUE',
+	'RED',
+	'YELLOW',
 	'PURPLE',
 	'ORANGE',
 	'TEAL',
