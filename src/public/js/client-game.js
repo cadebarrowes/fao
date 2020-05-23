@@ -21,6 +21,11 @@ function generateClientGameState() {
 		},
 		getUserColor(username) {
 			let userIdx = this.getUsernames().findIndex((u) => u === username); // needs es6 polyfill
+			if (username.substring(0,1) < 10 && username.substring(0,1) >= 0) {
+				return userIdx >= 0
+					? Color.HEX[Color.ORDER[username.substring(0,1)]] || 'var(--grey6)'
+					: 'var(--grey6)';
+			}
 			return userIdx >= 0
 				? Color.HEX[Color.ORDER[userIdx]] || 'var(--grey6)'
 				: 'var(--grey6)';
